@@ -1,0 +1,113 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    	<title>LoviSatya Journey</title>
+
+    	<!--===  FONTS ===-->
+    	<link href="https://fonts.googleapis.com/css?family=Cormorant+Garamond:300,300i,400,400i,700,700i" rel="stylesheet">
+
+    	<!--=== STYLES ===-->
+    	<link rel="stylesheet" href="{% static 'assets/css/vendors/bootstrap.min.css' %}">
+    	<link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <link rel="stylesheet" href="{% static 'assets/css/master.css' %}">
+    <link rel="stylesheet" href="{% static 'assets/css/custom.css' %}">
+  </head>
+  <body>
+    <header>
+      <div class="hero d-flex align-items-center justify-content-center" style="background-image:url({% static 'assets/img/dresscodebg.png' %})">
+        <div class="text-center headerwrapper">
+          <h1 class="rsvp-box__title u-font-script">You Crack <br class="d-md-none"> The Code!</h1>
+        </div>
+        <div class="scrolldown">
+          <p>scroll down</p>
+        </div>
+      </div>
+    </header>
+
+    <!--=== Out story timeline ===-->
+    <section class="story js-section" id="story">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-10 offset-lg-1">
+            <div class="story-timeline d-md-flex">
+              <!-- Second and third text block should be written twice because of the different flow on desktop and mobile devices. Desktop uses two column layout, while mobile uses one column.
+              -->
+
+              <!-- Story timeline: left column -->
+              <div class="story-timeline__col story-timeline__col--left">
+                <div class="story-timeline__text">
+                  <h4><ion-icon name="heart" class="icon icon--sm icon--primary u-bg-grey d-none d-md-block"></ion-icon>Dresscode</h4>
+                  <p>Wear your best white shirt with black trousers. Some extra loafers would be great. Cannot afford the suspenders? Dont worry! We'll handle it.</p>
+                </div>
+                <img src="{% static 'assets/img/dresscode2.jpg' %}" class="d-none d-md-block" alt="Six happy years" data-aos="zoom-in-right"/>
+                <img src="{% static 'assets/img/dresscode1.png' %}" class="d-md-none" alt="First time we met" data-aos="zoom-in-right"/>
+                <!-- Only visible on mobile devices -->
+                <div class="story-timeline__text d-md-none" data-aos="zoom-in-right">
+                  <h4>Perpare for the Quiz!</h4>
+                  <p>Prepare for the best night ever! Don't forget to tell your driver that your key is in the left pocket and your wallet in the other side.</p>
+                </div>
+                <!-- Only visible on desktop devices -->
+                <div class="story-timeline__text d-none d-md-block" data-aos="zoom-in-right">
+                  <h4><ion-icon name="heart" class="icon icon--sm icon--primary u-bg-grey d-none d-md-block"></ion-icon>Join our first dance</h4>
+                  <p>High School Musical who? Click on link below to learn the dance. Or at least just a sneak peek of it would be great!</p>
+                  <a href="https://www.youtube.com/watch?v=iDOCFz9gmxI" target="_blank"><h5><b>The Dance</b></h5></a>
+                </div>
+              </div>
+
+              <!-- Story timeline: right column -->
+              <div class="story-timeline__col story-timeline__col--right">
+                <img src="{% static 'assets/img/dresscode1.png' %}" class="d-none d-md-block" alt="First time we met" data-aos="zoom-in-left" />
+                <img src="{% static 'assets/img/dresscode2.jpg' %}" class="d-md-none" alt="First time we met" data-aos="zoom-in-left" />
+                <!-- Only visible on desktop devices -->
+                <div class="story-timeline__text d-none d-md-block" data-aos="zoom-in-left">
+                  <h4>Perpare for the Quiz!<ion-icon name="heart" class="icon icon--sm icon--primary u-bg-grey d-none d-md-block" data-aos="zoom-in"></ion-icon></h4>
+                  <p>Prepare for the best night ever! Don't forget to tell your driver that your key is in the left pocket and your wallet in the other side.</p>
+                </div>
+                <!-- Only visible on mobile devices -->
+                <div class="story-timeline__text d-md-none" data-aos="zoom-in-left">
+                  <h4>Join our first dance</h4>
+                  <p>High School Musical who? Click on below link to learn the dance. Or at least just a sneak peek of it would be great!
+                  </p>
+                  <a href="https://www.youtube.com/watch?v=iDOCFz9gmxI" target="_blank"><h5><b>The Dance</b></h5></a>
+                </div>
+                <img src="{% static 'assets/img/dresscode3.jpg' %}" alt="She said yes" data-aos="zoom-in-left" />
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <br><br><br>
+      <div class="container">
+        <div class="row">
+          <div class="col-12 bth">
+            <a href="{% url 'home' %}" class="btn rsvp-form-submit">
+              <span>Back To Home</span>
+            </a>
+
+          </div>
+        </div>
+      </div>
+      <br><br><br>
+    </section>
+    <!--== End of our story timeline. ==-->
+
+    <script src="{% static 'assets/js/vendors/jquery-3.3.1.min.js' %}"></script>
+    <script src="{% static 'assets/js/vendors/bootstrap.min.js' %}"></script>
+    <script src="{% static 'assets/js/vendors/jquery.countdown.min.js' %}"></script>
+    <script src="https://unpkg.com/imagesloaded@4/imagesloaded.pkgd.min.js"></script>
+    <script src="https://unpkg.com/masonry-layout@4/dist/masonry.pkgd.min.js"></script>
+    <script src="{% static 'assets/js/vendors/slick.min.js' %}"></script>
+    <script src="https://unpkg.com/ionicons@4.4.2/dist/ionicons.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="{% static 'assets/js/script.js' %}"></script>
+
+    <script src="{% static 'assets/js/custom.js' %}"></script>
+  </body>
+</html>

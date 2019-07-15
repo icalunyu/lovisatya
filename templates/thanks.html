@@ -1,0 +1,31 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    	<title>LoviSatya Journey</title>
+
+    	<!--===  FONTS ===-->
+    	<link href="https://fonts.googleapis.com/css?family=Cormorant+Garamond:300,300i,400,400i,700,700i" rel="stylesheet">
+
+    	<!--=== STYLES ===-->
+    	<link rel="stylesheet" href="{% static 'assets/css/vendors/bootstrap.min.css' %}">
+    	<link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <link rel="stylesheet" href="{% static 'assets/css/master.css' %}">
+    <link rel="stylesheet" href="{% static 'assets/css/custom.css' %}">
+  </head>
+  <body>
+    <header>
+      <div class="hero d-flex align-items-center justify-content-center" style="background-image:url({% static 'assets/img/thanks.png' %})">
+        <div class="text-center headerwrapper">
+          <h1 class="rsvp-box__title u-font-script">Thank You</h1>
+          <a href="{% url 'home' %}" class="btn rsvp-form-submit">
+            <span>Back To Home</span>
+          </a>
+        </div>
+      </div>
+    </header>
+  </body>
+</html>
